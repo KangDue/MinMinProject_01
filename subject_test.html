@@ -34,15 +34,17 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아직이다...</button>
-            <button type="button" onclick="score_plus()" class="btn btn-primary">이해했다!</button>
+            <button id="no_1" name="1" type="button" onclick="score_plus(this)" class="btn btn-primary">이해했니?</button>
           </div>
         </div>
       </div>
     </div>
 
 		<div>
-      <div class="fs-6">현재 진도는 0/25 입니다.</div>
-		  <progress value="0" max="25" id="score"></progress>
+        <span style="margin-left: 10px; font-size: 5px; text-align: center;">진행률:</span>
+        <span id="now" style="font-size: 5px; text-align: center;">0</span>
+        <span id="nowmax" style="font-size: 5px; text-align: center;">/ 25</span>
+		  <progress value="0" max="25" id="score" style="margin-left: 10px ; vertical-align: middle;"></progress>
 		</div>
     
     <h1 class="text-center bg-dark" style="color:white; padding-top:10px;padding-bottom: 10px;">HTML_CSS_정리</h1>
@@ -69,6 +71,8 @@
       // $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
       var a = document.getElementById('mec');
       var b = document.getElementById('mec2');
+      var c = document.getElementById('now');
+      var d = document.getElementById('nowmax');
 
       a.addEventListener('click', updateBtn);
 
@@ -83,8 +87,18 @@
         }
       }
 
-      function score_plus() {
+      function score_plus(e) {
       document.getElementById( 'score' ).value += 1;
+      alert(e.id);
+      e.disabled = true;
+      // var k = Integer.toString(document.getElementById( 'score' ).value)
+      // c.textContent = String.format("현재 진도는 %s/25 입니다.",document.getElementById( 'score' ).value);
+      // c.textContent = document.getElementById( 'score' ).value;
+      c.textContent = temp2;
+      if (document.getElementById( 'score' ).value == 25){
+        d.textContent = "/ 25 학습을 완료하셨습니다. 축하합니다!"
+      }
+
       }
 
     </script>
