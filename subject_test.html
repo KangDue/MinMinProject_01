@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTML_CSS_과목평가</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      body{
+        font-family: 'Jua', sans-serif;
+      }
+    </style>
+
+
+  </head>
+
+  <body>
+    <!-- Modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              Add rows here
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">아직이다...</button>
+            <button type="button" onclick="score_plus()" class="btn btn-primary">이해했다!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<div>
+      <div class="fs-6">현재 진도는 0/25 입니다.</div>
+		  <progress value="0" max="25" id="score"></progress>
+		</div>
+    
+    <h1 class="text-center bg-dark" style="color:white; padding-top:10px;padding-bottom: 10px;">HTML_CSS_정리</h1>
+
+
+
+    <!-- Button trigger modal -->
+    <div class="container">
+      <div class="row">
+
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modal1">
+          기본구조
+        </button>
+        <input type="button" id="mec" name="name" value="기계 켜기" data-bs-target="">
+        <p id="mec2">gogogo</p>
+      </div>
+
+
+
+    </div>
+
+    <script>
+      // var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+      // $.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+      var a = document.getElementById('mec');
+      var b = document.getElementById('mec2');
+
+      a.addEventListener('click', updateBtn);
+
+      function updateBtn() {
+        if (a.value == '기계 켜기') {
+          a.value = '어잌후 이게 되네?';
+          b.textContent = '가능합니다잉.';
+        }
+        else {
+          a.value = '기계 켜기';
+          b.textContent = '기계가 멈췄습니다.';
+        }
+      }
+
+      function score_plus() {
+      document.getElementById( 'score' ).value += 1;
+      }
+
+    </script>
+
+
+
+    
+
+    
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+</html>
