@@ -38,3 +38,41 @@ java 함수를 이용해서 버튼을 클릭하면 게이지가 올라가는 기
 - 그런데 여러 버튼을 만들고 id도 전부 다르게 설정했는데 버튼 전체가 비활성화됨...
 - this를 자세히 살펴보니 type of global this 라고 써 있는것을 발견.
 - 는 약간의 착각이 있었고 버튼을 전부 하나의 modal로 연결해놔서 전부 disabled되었던 것.
+1-4. problem 모달 창이 열릴때 몇번째 열어서 보고있는지 기록하고 싶음.
+- getElementsByClassName으로 class를 가져오고 addEventListner로 추가하려했으나 여러객체에 한번에 추가불가한것으로 보임. for문쓰면 될듯한데 pass
+- 다른 방법을 찾다보니 $(id또는 클래스 등 ..).on('show.bs.modal',함수) 방법을 찾음.
+- 참고:https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=sooni_&logNo=221455423015
+- 각 problem 모달이 첫 번째 버튼 제외 나머지는 정상작동을 안해서 왜이러지 했는데 내용 업데이트를 1번 버튼에만 해둬서 함수 중간에 오류가 발생했던것
+- 뭔가 잘 안되면 개발자도구로 오류가 없나 살펴보는게 중요하다!!
+- 왜 java 함수들이 안먹히나 했더니 안불러와서 그랬던거였다. (일단은 쓸 수 있는것만 쓰자)
+- span의 값을 변경하기위해 getattribute, setattribute method를 활용했다.
+- 결국 jquery를 불러왔다. 진작 했으면 편했을텐데... each문을 활용해 각각에 모달이 열리면 값 갱신 성공
+
+
+
+
+
+
+###### 참고자료
+<!-- 형변환 -->
+1. https://mine-it-record.tistory.com/330 
+<!-- Each문 -->
+2. https://webclub.tistory.com/455
+<!-- modal 속성 -->
+3. https://getbootstrap.com/docs/5.0/components/modal/
+<!-- 이벤트의 종류 -->
+4. https://jenny-daru.tistory.com/17
+<!-- String indexing, slicing -->
+5. https://coding-factory.tistory.com/126
+<!-- 이벤트 리스터 예제 -->
+6. https://kkk-kkk.tistory.com/entry/%EC%98%88%EC%A0%9C-9-5-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%A6%AC%EC%8A%A4%EB%84%88%EC%97%90%EC%84%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B0%9D%EC%B2%B4-%EC%A0%84%EB%8B%AC-%EB%B0%9B%EA%B8%B0
+<!-- html, dom, form 등 간단 예제 -->
+7. https://terianp.tistory.com/92
+<!-- DOM 객체 목록 -->
+8. http://www.tcpschool.com/javascript/js_dom_document
+<!-- jump to java -->
+9. http://www.tcpschool.com/javascript/js_dom_document
+<!-- progress bar -->
+10. https://www.codingfactory.net/11010
+<!-- input 사용법 -->
+11. https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/button
