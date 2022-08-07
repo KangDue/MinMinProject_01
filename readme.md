@@ -76,3 +76,10 @@ java 함수를 이용해서 버튼을 클릭하면 게이지가 올라가는 기
 10. https://www.codingfactory.net/11010
 <!-- input 사용법 -->
 11. https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/button
+<!-- form 작동방식의 이해 -->
+https://www.nextree.co.kr/p8428/
+<!-- 선택자 -->
+https://www.google.com/search?q=%EC%84%A0%ED%83%9D%EC%9E%90+%ED%8F%AC%ED%95%A8%EA%B4%80%EA%B3%84&rlz=1C1SQJL_koKR786KR786&oq=%EC%84%A0%ED%83%9D%EC%9E%90+%ED%8F%AC%ED%95%A8%EA%B4%80%EA%B3%84&aqs=chrome..69i57j0i546l4.2561j0j4&sourceid=chrome&ie=UTF-8
+
+https://code.tutsplus.com/ko/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
